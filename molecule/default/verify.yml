@@ -1,0 +1,36 @@
+---
+- name: Verify
+  hosts: all
+  become: yes
+  gather_facts: no
+
+  tasks:
+    - name: check server members
+      ansible.builtin.command:
+        cmd: nomad server members
+
+    - name: check node status
+      ansible.builtin.command:
+        cmd: nomad node status
+
+    - name: initialize example job
+      ansible.builtin.command:
+        cmd: nomad init example.nomad
+      args:
+        creates: example.nomad
+
+    - name: run and stop example job
+      block:
+        - name: run example job
+          ansible.builtin.command:
+            cmd: nomad job run example.nomad
+
+        - name: stop example job
+          ansible.builtin.command:
+            cmd: nomad job stop example
+      when:
+        - ansible_connection not in [ "container", "docker", "community.docker.docker" ]
+
+    - name: check the ui
+      ansible.builtin.uri:
+        url: "http://localhost:4646/ui/"

@@ -4,7 +4,7 @@ Install and configure Nomad.
 
 |GitHub|GitLab|Quality|Downloads|Version|
 |------|------|-------|---------|-------|
-|[![github](https://github.com/buluma/ansible-role-nomad/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-nomad/actions)|[![gitlab](https://gitlab.com/buluma/ansible-role-nomad/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-nomad)|[![quality](https://img.shields.io/ansible/quality/)](https://galaxy.ansible.com/buluma/nomad)|[![downloads](https://img.shields.io/ansible/role/d/)](https://galaxy.ansible.com/buluma/nomad)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-nomad.svg)](https://github.com/buluma/ansible-role-nomad/releases/)|
+|[![github](https://github.com/buluma/ansible-role-nomad/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-nomad/actions)|[![gitlab](https://gitlab.com/buluma/ansible-role-nomad/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-nomad)|[![quality](https://img.shields.io/ansible/quality/58247)](https://galaxy.ansible.com/buluma/nomad)|[![downloads](https://img.shields.io/ansible/role/d/58247)](https://galaxy.ansible.com/buluma/nomad)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-nomad.svg)](https://github.com/buluma/ansible-role-nomad/releases/)|
 
 ## [Example Playbook](#example-playbook)
 

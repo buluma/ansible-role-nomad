@@ -1,10 +1,10 @@
-# [Ansible role nomad](#nomad)
+# Ansible role [nomad](https://galaxy.ansible.com/ui/standalone/roles/buluma/nomad/documentation)
 
 Install and configure Nomad.
 
-|GitHub|Version|Issues|Pull Requests|
-|------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-nomad/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-nomad/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-nomad.svg)](https://github.com/buluma/ansible-role-nomad/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-nomad.svg)](https://github.com/buluma/ansible-role-nomad/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-nomad.svg)](https://github.com/buluma/ansible-role-nomad/pulls/)|
+|GitHub|Version|Issues|Pull Requests|Downloads|
+|------|-------|------|-------------|---------|
+|[![github](https://github.com/buluma/ansible-role-nomad/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-nomad/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-nomad.svg)](https://github.com/buluma/ansible-role-nomad/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-nomad.svg)](https://github.com/buluma/ansible-role-nomad/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-nomad.svg)](https://github.com/buluma/ansible-role-nomad/pulls/)|[![Ansible Role](https://img.shields.io/ansible/role/d/buluma/nomad)](https://galaxy.ansible.com/ui/standalone/roles/buluma/nomad/documentation)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -125,9 +125,7 @@ If you find issues, please register them in [GitHub](https://github.com/buluma/a
 
 ## [Author Information](#author-information)
 
-[Michael Buluma](https://buluma.github.io/)
+[Shadow Walker](https://buluma.github.io/)
 
-
-### [Special Thanks](#special-thanks)
 
 Template inspired by [Robert de Bock](https://github.com/robertdebock)

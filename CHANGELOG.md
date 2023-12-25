@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/buluma/ansible-role-nomad/tree/HEAD)
+## [1.0.2](https://github.com/buluma/ansible-role-nomad/tree/1.0.2) (2023-12-24)
 
-[Full Changelog](https://github.com/buluma/ansible-role-nomad/compare/1.0.1...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-nomad/compare/1.0.1...1.0.2)
 
 **Merged pull requests:**
 

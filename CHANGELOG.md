@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-nomad/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-nomad/compare/1.0.2...HEAD)
+
+**Closed issues:**
+
+- Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#12](https://github.com/buluma/ansible-role-nomad/issues/12)
+
 ## [1.0.2](https://github.com/buluma/ansible-role-nomad/tree/1.0.2) (2023-12-24)
 
 [Full Changelog](https://github.com/buluma/ansible-role-nomad/compare/1.0.1...1.0.2)

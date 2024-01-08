@@ -2,7 +2,16 @@
 
 ## [Unreleased](https://github.com/buluma/ansible-role-nomad/tree/HEAD)
 
-[Full Changelog](https://github.com/buluma/ansible-role-nomad/compare/1.0.2...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-nomad/compare/1.1.0...HEAD)
+
+**Merged pull requests:**
+
+- Bump buluma/gh-action-auto-merge-dependabot-updates from 1.0.5 to 1.0.8 [\#14](https://github.com/buluma/ansible-role-nomad/pull/14) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump actions/checkout from 3 to 4 [\#13](https://github.com/buluma/ansible-role-nomad/pull/13) ([dependabot[bot]](https://github.com/apps/dependabot))
+
+## [1.1.0](https://github.com/buluma/ansible-role-nomad/tree/1.1.0) (2024-01-05)
+
+[Full Changelog](https://github.com/buluma/ansible-role-nomad/compare/1.0.2...1.1.0)
 
 **Closed issues:**
 

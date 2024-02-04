@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-nomad/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-nomad/compare/1.2.0...HEAD)
+
+**Merged pull requests:**
+
+- Bump release-drafter/release-drafter from 5 to 6 [\#18](https://github.com/buluma/ansible-role-nomad/pull/18) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [1.2.0](https://github.com/buluma/ansible-role-nomad/tree/1.2.0) (2024-01-20)
 
 [Full Changelog](https://github.com/buluma/ansible-role-nomad/compare/1.1.0...1.2.0)

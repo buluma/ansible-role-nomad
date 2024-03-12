@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- Bump release-drafter/release-drafter from 5 to 6 [\#19](https://github.com/buluma/ansible-role-nomad/pull/19) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump release-drafter/release-drafter from 5 to 6 [\#18](https://github.com/buluma/ansible-role-nomad/pull/18) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [1.2.0](https://github.com/buluma/ansible-role-nomad/tree/1.2.0) (2024-01-20)

@@ -5,21 +5,21 @@
     that:
       - nomad_install_package is defined
       - nomad_install_package is boolean
-    quiet: yes
+    quiet: true
 
 - name: assert | Test if nomad_server is set correctly
   ansible.builtin.assert:
     that:
       - nomad_server is defined
       - nomad_server is boolean
-    quiet: yes
+    quiet: true
 
 - name: assert | Test if nomad_server_bind_addr is set correctly
   ansible.builtin.assert:
     that:
       - nomad_server_bind_addr is defined
       - nomad_server_bind_addr is string
-    quiet: yes
+    quiet: true
   when:
     - nomad_server | bool
 
@@ -29,7 +29,7 @@
       - nomad_server_log_level is defined
       - nomad_server_log_level is string
       - nomad_server_log_level in [ "DEBUG", "INFO", "WARN" ]
-    quiet: yes
+    quiet: true
   when:
     - nomad_server | bool
 
@@ -38,7 +38,7 @@
     that:
       - nomad_server_data_dir is defined
       - nomad_server_data_dir is string
-    quiet: yes
+    quiet: true
   when:
     - nomad_server | bool
 
@@ -47,7 +47,7 @@
     that:
       - nomad_server_bootstrap_expect is defined
       - nomad_server_bootstrap_expect is number
-    quiet: yes
+    quiet: true
   when:
     - nomad_server | bool
 
@@ -56,7 +56,7 @@
     that:
       - nomad_server_bootstrap_expect is not divisibleby 2
     fail_msg: "This parameter should be odd, it's even."
-    quiet: yes
+    quiet: true
   when:
     - nomad_server | bool
 
@@ -65,7 +65,7 @@
     that:
       - nomad_agent is defined
       - nomad_agent is boolean
-    quiet: yes
+    quiet: true
 
 - name: assert | Test if nomad_agent_log_level is set correctly
   ansible.builtin.assert:
@@ -73,7 +73,7 @@
       - nomad_agent_log_level is defined
       - nomad_agent_log_level is string
       - nomad_agent_log_level in [ "DEBUG", "INFO", "WARN" ]
-    quiet: yes
+    quiet: true
   when:
     - nomad_agent | bool
 
@@ -82,7 +82,7 @@
     that:
       - nomad_agent_data_dir is defined
       - nomad_agent_data_dir is string
-    quiet: yes
+    quiet: true
   when:
     - nomad_agent | bool
 
@@ -91,7 +91,7 @@
     that:
       - nomad_agent_servers is defined
       - nomad_agent_servers is iterable
-    quiet: yes
+    quiet: true
   when:
     - nomad_agent | bool
 
@@ -104,7 +104,7 @@
       - item.port is number
       - item.port > 0
       - item.port < 65536
-    quiet: yes
+    quiet: true
   loop: "{{ nomad_agent_servers }}"
   loop_control:
     label: "{{ item.name }}"
@@ -116,4 +116,4 @@
     that:
       - nomad_server != nomad_agent
     fail_msg: "Either nomad_server or nomad_agent can be enabled."
-    quiet: yes
+    quiet: true

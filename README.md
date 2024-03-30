@@ -17,7 +17,15 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
   become: true
   gather_facts: true
 
+  pre_tasks:
+    - name: Update apt cache.
+      apt: update_cache=yes cache_valid_time=600
+      when: ansible_os_family == 'Debian'
+      changed_when: false
+
   roles:
+    - role: buluma.core_dependencies
+    - role: buluma.hashicorp
     - role: buluma.nomad
 ```
 
@@ -32,8 +40,6 @@ The machine needs to be prepared. In CI this is done using [`molecule/default/pr
 
   roles:
     - role: buluma.bootstrap
-    - role: buluma.core_dependencies
-    - role: buluma.hashicorp
 ```
 
 Also see a [full explanation and example](https://buluma.github.io/how-to-use-these-roles.html) on how to use these roles.
@@ -105,7 +111,7 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 |[EL](https://hub.docker.com/r/buluma/enterpriselinux)|8|
 |[Debian](https://hub.docker.com/r/buluma/debian)|bullseye|
 |[Fedora](https://hub.docker.com/r/buluma/fedora)|38, 39|
-|[Ubuntu](https://hub.docker.com/r/buluma/ubuntu)|all|
+|[Ubuntu](https://hub.docker.com/r/buluma/ubuntu)|focal, bionic, jammy|
 
 The minimum version of Ansible required is 2.12, tests have been done to:
 

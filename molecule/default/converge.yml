@@ -13,4 +13,4 @@
   roles:
     - role: buluma.core_dependencies
     - role: buluma.hashicorp
-    - role: ansible-role-nomad
+    - role: buluma.nomad

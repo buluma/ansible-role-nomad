@@ -1,5 +1,14 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-nomad/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-nomad/compare/24.3.31...HEAD)
+
+**Closed issues:**
+
+- Update action [\#11](https://github.com/buluma/ansible-role-nomad/issues/11)
+- rebuild action [\#10](https://github.com/buluma/ansible-role-nomad/issues/10)
+
 ## [24.3.31](https://github.com/buluma/ansible-role-nomad/tree/24.3.31) (2024-03-30)
 
 [Full Changelog](https://github.com/buluma/ansible-role-nomad/compare/1.2.0...24.3.31)

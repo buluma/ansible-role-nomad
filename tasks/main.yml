@@ -70,6 +70,7 @@
   ansible.builtin.command:
     cmd: nomad server join {{ nomad_leader }}:4648
   register: nomad_join_nomad_leader
+  changed_when: true
   when:
     - ansible_hostname != nomad_server
     - ansible_hostname not in nomad_list_server_members.stdout

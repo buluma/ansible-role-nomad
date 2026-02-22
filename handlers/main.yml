@@ -1,6 +1,4 @@
 ---
-# handlers file for nomad
-
 - name: Restart nomad
   ansible.builtin.service:
     name: nomad

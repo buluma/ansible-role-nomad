@@ -11,35 +11,30 @@ Install and configure Nomad.
 This example is taken from [`molecule/default/converge.yml`](https://github.com/buluma/ansible-role-nomad/blob/master/molecule/default/converge.yml) and is tested on each push, pull request and release.
 
 ```yaml
----
-- name: Converge
-  hosts: all
-  become: true
+- become: true
   gather_facts: true
-
+  hosts: all
+  name: Converge
   pre_tasks:
-    - name: Update apt cache.
-      apt: update_cache=yes cache_valid_time=600
-      when: ansible_os_family == 'Debian'
-      changed_when: false
-
+  - apt: update_cache=yes cache_valid_time=600
+    changed_when: false
+    name: Update apt cache.
+    when: ansible_os_family == 'Debian'
   roles:
-    - role: buluma.core_dependencies
-    - role: buluma.hashicorp
-    - role: buluma.nomad
+  - role: buluma.core_dependencies
+  - role: buluma.hashicorp
+  - role: buluma.nomad
 ```
 
 The machine needs to be prepared. In CI this is done using [`molecule/default/prepare.yml`](https://github.com/buluma/ansible-role-nomad/blob/master/molecule/default/prepare.yml):
 
 ```yaml
----
-- name: Prepare
-  hosts: all
+- become: true
   gather_facts: false
-  become: true
-
+  hosts: all
+  name: Prepare
   roles:
-    - role: buluma.bootstrap
+  - role: buluma.bootstrap
 ```
 
 Also see a [full explanation and example](https://buluma.github.io/how-to-use-these-roles.html) on how to use these roles.
@@ -49,35 +44,19 @@ Also see a [full explanation and example](https://buluma.github.io/how-to-use-th
 The default values for the variables are set in [`defaults/main.yml`](https://github.com/buluma/ansible-role-nomad/blob/master/defaults/main.yml):
 
 ```yaml
----
-# defaults file for nomad
-
-# You can install nomad using a package in this role. If you have installed
-# nomad manually, set this to `false`.
-nomad_install_package: true
-
-# Set this to "true" for a server.
-nomad_server: true
-
-# Configuration items for the Nomad server
-nomad_server_data_dir: /tmp/server
-nomad_server_bind_addr: "0.0.0.0"
-nomad_server_log_level: INFO
-
-# How many servers and agents are expected?
-nomad_server_bootstrap_expect: 1
-
-# This this to "true" for an agent.
 nomad_agent: false
-
-# Configuration items for the Nomad agent
-nomad_agent_log_level: INFO
 nomad_agent_data_dir: /tmp/agent
-nomad_agent_name: "{{ inventory_hostname }}"
-
+nomad_agent_log_level: INFO
+nomad_agent_name: '{{ inventory_hostname }}'
 nomad_agent_servers:
-  - name: "127.0.0.1"
-    port: 4647
+- name: 127.0.0.1
+  port: 4647
+nomad_install_package: true
+nomad_server: true
+nomad_server_bind_addr: 0.0.0.0
+nomad_server_bootstrap_expect: 1
+nomad_server_data_dir: /tmp/server
+nomad_server_log_level: INFO
 ```
 
 ## [Requirements](#requirements)

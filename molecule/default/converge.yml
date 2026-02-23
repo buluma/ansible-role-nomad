@@ -1,14 +1,14 @@
 ---
-  - become: true
-    gather_facts: true
-    hosts: all
-    name: Converge
-    pre_tasks:
-      - apt: update_cache=yes cache_valid_time=600
-        changed_when: false
-        name: Update apt cache.
-        when: ansible_os_family == 'Debian'
-    roles:
-      - role: buluma.core_dependencies
-      - role: buluma.hashicorp
-      - role: buluma.nomad
+- become: true
+  gather_facts: true
+  hosts: all
+  name: Converge
+  pre_tasks:
+  - apt: update_cache=yes cache_valid_time=600
+    changed_when: false
+    name: Update apt cache.
+    when: ansible_os_family == 'Debian'
+  roles:
+  - role: buluma.core_dependencies
+  - role: buluma.hashicorp
+  - role: buluma.nomad

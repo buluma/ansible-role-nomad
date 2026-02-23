@@ -11,30 +11,32 @@ Install and configure Nomad.
 This example is taken from [`molecule/default/converge.yml`](https://github.com/buluma/ansible-role-nomad/blob/master/molecule/default/converge.yml) and is tested on each push, pull request and release.
 
 ```yaml
-- become: true
-  gather_facts: true
-  hosts: all
-  name: Converge
-  pre_tasks:
-  - apt: update_cache=yes cache_valid_time=600
-    changed_when: false
-    name: Update apt cache.
-    when: ansible_os_family == 'Debian'
-  roles:
-  - role: buluma.core_dependencies
-  - role: buluma.hashicorp
-  - role: buluma.nomad
+---
+  - become: true
+    gather_facts: true
+    hosts: all
+    name: Converge
+    pre_tasks:
+      - apt: update_cache=yes cache_valid_time=600
+        changed_when: false
+        name: Update apt cache.
+        when: ansible_os_family == 'Debian'
+    roles:
+      - role: buluma.core_dependencies
+      - role: buluma.hashicorp
+      - role: buluma.nomad
 ```
 
 The machine needs to be prepared. In CI this is done using [`molecule/default/prepare.yml`](https://github.com/buluma/ansible-role-nomad/blob/master/molecule/default/prepare.yml):
 
 ```yaml
-- become: true
-  gather_facts: false
-  hosts: all
-  name: Prepare
-  roles:
-  - role: buluma.bootstrap
+---
+  - become: true
+    gather_facts: false
+    hosts: all
+    name: Prepare
+    roles:
+      - role: buluma.bootstrap
 ```
 
 Also see a [full explanation and example](https://buluma.github.io/how-to-use-these-roles.html) on how to use these roles.
@@ -44,13 +46,14 @@ Also see a [full explanation and example](https://buluma.github.io/how-to-use-th
 The default values for the variables are set in [`defaults/main.yml`](https://github.com/buluma/ansible-role-nomad/blob/master/defaults/main.yml):
 
 ```yaml
+---
 nomad_agent: false
 nomad_agent_data_dir: /tmp/agent
 nomad_agent_log_level: INFO
-nomad_agent_name: '{{ inventory_hostname }}'
+nomad_agent_name: "{{ inventory_hostname }}"
 nomad_agent_servers:
-- name: 127.0.0.1
-  port: 4647
+  - name: 127.0.0.1
+    port: 4647
 nomad_install_package: true
 nomad_server: true
 nomad_server_bind_addr: 0.0.0.0

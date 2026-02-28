@@ -1,8 +1,6 @@
 ---
-roles:
-  - name: buluma.bootstrap
-  - name: buluma.core_dependencies
-  - name: buluma.hashicorp
 collections:
-
-# TODO: add to tracker
+roles:
+- name: buluma.bootstrap
+- name: buluma.core_dependencies
+- name: buluma.hashicorp

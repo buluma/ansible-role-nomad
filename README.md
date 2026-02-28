@@ -52,8 +52,8 @@ nomad_agent_data_dir: /tmp/agent
 nomad_agent_log_level: INFO
 nomad_agent_name: "{{ inventory_hostname }}"
 nomad_agent_servers:
-- name: 127.0.0.1
-  port: 4647
+  - name: 127.0.0.1
+    port: 4647
 nomad_install_package: true
 nomad_server: true
 nomad_server_bind_addr: 0.0.0.0
@@ -109,3 +109,4 @@ If you find issues, please register them on [GitHub](https://github.com/buluma/a
 ## [Author Information](#author-information)
 
 [buluma](https://buluma.github.io/)
+

@@ -24,7 +24,7 @@
       name: Stop example job
     name: Run and stop example job
     when:
-    - ansible_connection not in [ "container", "docker", 
+    - ansible_connection not in [ "container", "docker",
       "community.docker.docker" ]
   - ansible.builtin.uri:
       url: http://localhost:4646/ui/

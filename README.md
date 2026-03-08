@@ -56,7 +56,7 @@ nomad_agent_servers:
     port: 4647
 nomad_install_package: true
 nomad_server: true
-nomad_server_bind_addr: 0.0.0.0
+nomad_server_bind_addr: "0.0.0.0"
 nomad_server_bootstrap_expect: 1
 nomad_server_data_dir: /tmp/server
 nomad_server_log_level: INFO
@@ -110,3 +110,4 @@ If you find issues, please register them on [GitHub](https://github.com/buluma/a
 ## [Author Information](#author-information)
 
 [buluma](https://buluma.github.io/)
+

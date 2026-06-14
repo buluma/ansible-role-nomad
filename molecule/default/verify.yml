@@ -1,25 +1,31 @@
 ---
 - become: true
   gather_facts: false
+- name: Verify
   hosts: all
   name: Verify
   tasks:
     - ansible.builtin.command:
+    changed_when: false
         cmd: nomad server members
       name: Check server members
     - ansible.builtin.command:
+    changed_when: false
         cmd: nomad node status
       name: Check node status
     - ansible.builtin.command:
+    changed_when: false
         cmd: nomad init example.nomad
       args:
         creates: example.nomad
       name: Initialize example job
     - block:
         - ansible.builtin.command:
+        changed_when: false
             cmd: nomad job run example.nomad
           name: Run example job
         - ansible.builtin.command:
+        changed_when: false
             cmd: nomad job stop example
           name: Stop example job
       name: Run and stop example job

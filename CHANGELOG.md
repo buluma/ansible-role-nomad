@@ -1,13 +1,19 @@
 # Changelog
 
-## [Unreleased](https://github.com/buluma/ansible-role-nomad/tree/HEAD)
+## [26.6.0](https://github.com/buluma/ansible-role-nomad/tree/26.6.0) (2026-06-14)
 
-[Full Changelog](https://github.com/buluma/ansible-role-nomad/compare/24.3.31...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-nomad/compare/24.3.31...26.6.0)
 
 **Closed issues:**
 
 - Update action [\#11](https://github.com/buluma/ansible-role-nomad/issues/11)
 - rebuild action [\#10](https://github.com/buluma/ansible-role-nomad/issues/10)
+
+**Merged pull requests:**
+
+- Bump docker/setup-buildx-action from 3 to 4 [\#28](https://github.com/buluma/ansible-role-nomad/pull/28) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump ansible/ansible-lint from 26.1.1 to 26.2.0 [\#26](https://github.com/buluma/ansible-role-nomad/pull/26) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump actions/checkout from 4 to 6 [\#25](https://github.com/buluma/ansible-role-nomad/pull/25) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [24.3.31](https://github.com/buluma/ansible-role-nomad/tree/24.3.31) (2024-03-30)
 

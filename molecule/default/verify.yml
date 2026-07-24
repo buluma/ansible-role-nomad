@@ -17,6 +17,9 @@
         cmd: nomad init example.nomad
         creates: example.nomad
       changed_when: false
+      when:
+        - ansible_connection not in [ "container", "docker",
+          "community.docker.docker" ]
     - name: Run and stop example job
       block:
         - name: Run example job
